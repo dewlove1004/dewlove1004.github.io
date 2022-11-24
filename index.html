@@ -33,6 +33,7 @@
                         <li><a href="/aria/menubar.html">Menubar</a></li>
                         <li><a href="/aria/tabs.html">Tab menu</a></li>
                         <li><a href="/aria/treeview.html">Treeview</a></li>
+                        <li><a href="/aria-practices-main/examples/index.html">practices-main</a>
                     </ul>
                 </li>
             </ul>
@@ -131,8 +132,22 @@
     </main>
     <footer class="container">
         <p>Copyright 이슬사랑</p>
+        <address></address>
     </footer>
-    <address></address>
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+$(function(){
+    // alert("hello");
+    $("header nav>ul>li").on("mouseenter keyup", function(){
+        $(this).addClass("on").siblings().removeClass("on")
+    })
+     $("header nav").on("mouseleave blur", function(){
+       $("header nav>ul>li").removeClass("on")
+    })
 
+    // $("header nav>ul>li>a")
+    // $("header nav>ul>li>ul")
+})
+</script>
+</body>
 </html>
